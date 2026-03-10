@@ -8,6 +8,7 @@ import subprocess
 import sys
 import getpass
 from datetime import datetime
+from urllib.parse import quote
 
 
 REPO = "Jo-Nan/Jo-Nan.github.io"
@@ -15,19 +16,21 @@ BRANCH = "main"
 USERNAME = "Jo-Nan"
 
 
-def run(cmd, check=True):
-    """执行命令并返回输出"""
-    result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+def run(cmd_list, check=True):
+    """执行命令（使用列表形式，避免 shell 注入/转义问题）"""
+    result = subprocess.run(cmd_list, capture_output=True, text=True)
     if check and result.returncode != 0:
-        print(f"❌ 命令失败: {cmd}")
-        print(result.stderr)
+        # 打印错误时隐藏可能包含 token 的 URL
+        stderr = result.stderr.replace(result.args[0] if isinstance(result.args, list) else "", "")
+        print(f"❌ 命令失败: {' '.join(cmd_list[:3])}...")
+        print(stderr)
         sys.exit(1)
     return result
 
 
 def main():
     # 1. 检查是否有改动
-    status = run("git status --porcelain").stdout.strip()
+    status = run(["git", "status", "--porcelain"]).stdout.strip()
     if not status:
         print("✅ 没有检测到任何改动，无需部署。")
         return
@@ -45,27 +48,28 @@ def main():
         msg = default_msg
 
     # 4. 请求令牌
-    token = getpass.getpass("请输入 GitHub Personal Access Token: ")
+    token = input("请输入 GitHub Personal Access Token: ").strip()
     if not token:
         print("❌ 令牌不能为空")
         sys.exit(1)
 
     # 5. Git add + commit
-    run("git add -A")
-    run(f'git commit -m "{msg}"')
+    run(["git", "add", "-A"])
+    run(["git", "commit", "-m", msg])
     print("✅ 已提交")
 
-    # 6. 推送（临时使用令牌，推送后恢复原 URL）
-    token_url = f"https://{USERNAME}:{token}@github.com/{REPO}.git"
+    # 6. 推送（使用 URL 编码的令牌，推送后恢复原 URL）
+    encoded_token = quote(token, safe="")
+    token_url = f"https://{USERNAME}:{encoded_token}@github.com/{REPO}.git"
     clean_url = f"https://github.com/{REPO}.git"
 
     try:
-        run(f"git remote set-url origin {token_url}")
-        run(f"git push origin {BRANCH}")
+        run(["git", "remote", "set-url", "origin", token_url])
+        run(["git", "push", "origin", BRANCH])
         print(f"🚀 部署成功！访问 https://jo-nan.github.io 查看")
     finally:
         # 无论成功失败，都清理令牌
-        run(f"git remote set-url origin {clean_url}", check=False)
+        run(["git", "remote", "set-url", "origin", clean_url], check=False)
 
 
 if __name__ == "__main__":
