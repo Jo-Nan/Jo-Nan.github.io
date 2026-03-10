@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nan Qiao — Ph.D. Student | Reinforcement Learning &amp; Edge Intelligence</title>
+  <meta name="description"
+    content="Academic homepage of Nan Qiao, a Ph.D. student in Computer Science at Central South University and visiting researcher at Tsinghua University. Research in Reinforcement Learning, Federated Learning, and Edge Intelligence." />
+  <meta name="keywords"
+    content="Nan Qiao, reinforcement learning, federated learning, edge intelligence, LLM optimization, Tsinghua University, Central South University" />
+  <meta name="author" content="Nan Qiao" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nan Qiao — Academic Homepage" />
+  <meta property="og:description"
+    content="Ph.D. Student in Computer Science. Research in Reinforcement Learning, Federated Learning, and Edge Intelligence." />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon (simple emoji fallback) -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ====== Navbar ====== -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="#" class="navbar__logo"><span>N</span>an Qiao</a>
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#service">Service</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ====== Hero / About ====== -->
+  <section class="hero section" id="about">
+    <div class="container">
+      <div class="hero__content">
+        <div class="hero__photo-wrapper reveal">
+          <img src="assets/profile.png" alt="Nan Qiao — Portrait" class="hero__photo" />
+        </div>
+        <div class="hero__info reveal">
+          <h1 class="hero__name">Nan Qiao</h1>
+          <p class="hero__title">Ph.D. Student in Computer Science</p>
+          <p class="hero__affiliation">
+            <strong>Central South University</strong> (Expected graduation: Dec. 2026)<br />
+            Visiting Ph.D. Student at <strong>Tsinghua University</strong>, Dept. of CS&T
+          </p>
+
+          <div class="interests">
+            <span class="interest-tag">Reinforcement Learning</span>
+            <span class="interest-tag">LLM Optimization</span>
+            <span class="interest-tag">Federated Learning</span>
+            <span class="interest-tag">Edge Intelligence</span>
+            <span class="interest-tag">Decision-Making</span>
+          </div>
+
+          <p class="hero__bio">
+            I am a Ph.D. student in Computer Science at Central South University and currently a visiting researcher at
+            the Institute of Human-Computer Interaction and Media Integration, Tsinghua University. I am fortunate to be
+            advised by <a href="https://juren1987.github.io/" target="_blank" rel="noopener">Prof. Ju Ren</a>.
+            My research primarily focuses on developing principled algorithms for Offline RL,
+            RL for Pretraining, and Edge Intelligence. Recently, I have been working
+            on collapse-suppressed optimizers and cross-covariance control for offline RL.
+          </p>
+
+          <div class="hero__links">
+            <a href="mailto:nanqiao.ai@gmail.com" class="hero__link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              Email
+            </a>
+            <a href="https://scholar.google.com/citations?hl=en&user=8h75s0sAAAAJ" class="hero__link" target="_blank"
+              rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14Zm0-2a5 5 0 1 0 0-10 5 5 0 0 0 0 10ZM1.5 9 12 1l10.5 8h-3v6h-2v-7L12 3.5 6.5 8H9v1H1.5Z" />
+              </svg>
+              Google Scholar
+            </a>
+            <a href="https://github.com/NanMuZ" class="hero__link" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 20.96c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.02 0c2.3-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18a4.65 4.65 0 0 1 1.24 3.22c0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22l-.01 3.29c0 .31.22.69.83.57A12 12 0 0 0 12 .3Z" />
+              </svg>
+              GitHub
+            </a>
+            <a href="CV.pdf" class="hero__link" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" />
+                <path d="M14 2v6h6" />
+                <path d="M16 13H8" />
+                <path d="M16 17H8" />
+                <path d="M10 9H8" />
+              </svg>
+              CV
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Recent News ====== -->
+  <section class="section" id="news">
+    <div class="container">
+      <h2 class="section__title reveal">Recent News</h2>
+      <ul class="news-list reveal">
+        <li>
+          <span class="news-date">Jan. 2026</span>
+          <span class="news-content">🎉 Our paper "Less is More: Clustered Cross-Covariance Control for Offline RL" was
+            accepted by <strong>ICLR 2026</strong>.</span>
+        </li>
+        <li>
+          <span class="news-date">Jan. 2026</span>
+          <span class="news-content">🎉 Our paper "FORLER: Federated Offline Reinforcement Learning with Q-Ensemble and
+            Actor Rectification" was accepted by <strong>IEEE ICC 2026</strong>.</span>
+        </li>
+        <li>
+          <span class="news-date">Dec. 2025</span>
+          <span class="news-content">🎉 Our paper "FOVA: Offline Federated Reinforcement Learning With Mixed-Quality
+            Data" was accepted by <strong>IEEE/ACM ToN</strong>.</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ====== Education ====== -->
+  <section class="section" id="education">
+    <div class="container">
+      <h2 class="section__title reveal">Education</h2>
+      <div class="timeline">
+
+        <div class="timeline__item reveal">
+          <div class="timeline__header">
+            <span class="timeline__school">Tsinghua University</span>
+            <span class="timeline__date">Sep 2022 — Present</span>
+          </div>
+          <p class="timeline__degree">Visiting Ph.D. Student, Dept. of Computer Science and Technology</p>
+          <ul class="timeline__details">
+            <li>Institute of Human-Computer Interaction and Media Integration, FIT 3-503</li>
+            <li>Advisor: <a href="https://juren1987.github.io/" target="_blank" rel="noopener"
+                style="color:var(--clr-accent);">Prof. Ju Ren</a></li>
+          </ul>
+        </div>
+
+        <div class="timeline__item reveal">
+          <div class="timeline__header">
+            <span class="timeline__school">Sun Yat-sen University</span>
+            <span class="timeline__date">Sep 2024 — Sep 2025</span>
+          </div>
+          <p class="timeline__degree">Visiting Ph.D. Student, School of Cyber Science and Technology</p>
+          <ul class="timeline__details">
+            <li>Advisor: <a href="https://shaunyue.github.io/" target="_blank" rel="noopener"
+                style="color:var(--clr-accent);">Prof. Sheng Yue</a></li>
+          </ul>
+        </div>
+
+        <div class="timeline__item reveal">
+          <div class="timeline__header">
+            <span class="timeline__school">Central South University</span>
+            <span class="timeline__date">Sep 2021 — Present</span>
+          </div>
+          <p class="timeline__degree">Ph.D. in Computer Science and Technology (Expected: Dec. 2026)</p>
+          <ul class="timeline__details">
+            <li>Advisor: <a href="https://juren1987.github.io/" target="_blank" rel="noopener"
+                style="color:var(--clr-accent);">Prof. Ju Ren</a></li>
+          </ul>
+        </div>
+
+        <div class="timeline__item reveal">
+          <div class="timeline__header">
+            <span class="timeline__school">Central South University</span>
+            <span class="timeline__date">Sep 2017 — Jun 2021</span>
+          </div>
+          <p class="timeline__degree">B.Eng. in Computer Science</p>
+          <ul class="timeline__details">
+            <li>Average Score: 92.44 / 100 · Rank: 1st</li>
+            <li>Honor: Outstanding Graduate of Hunan Province</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Publications ====== -->
+  <section class="section" id="publications">
+    <div class="container">
+      <h2 class="section__title reveal">Publications</h2>
+      <div class="pub-list">
+
+        <!-- Pub 1 -->
+        <div class="pub reveal">
+          <span class="pub__number">[1]</span>
+          <div class="pub__content">
+            <p class="pub__title">AdamO: A Collapse-Suppressed Optimizer for Offline RL</p>
+            <p class="pub__authors"><span class="me">Nan Qiao</span>, Sheng Yue, Shuning Wang, Ju Ren</p>
+            <div class="pub__meta">
+              <span class="pub__venue">Submitted to ICML 2026</span>
+              <span class="pub__badge pub__badge--sub">Submitted</span>
+              <span class="pub__badge pub__badge--ccfa">CCF A</span>
+            </div>
+          </div>
+          <div class="pub__image">
+            <img src="assets/adamo_logo.svg" alt="Paper Image">
+          </div>
+        </div>
+
+        <!-- Pub 2 -->
+        <div class="pub reveal">
+          <span class="pub__number">[2]</span>
+          <div class="pub__content">
+            <p class="pub__title">Less is More: Clustered Cross-Covariance Control for Offline RL</p>
+            <p class="pub__authors"><span class="me">Nan Qiao</span>, Sheng Yue, Shuning Wang, Yongheng Deng, Ju Ren</p>
+            <div class="pub__meta">
+              <span class="pub__venue">ICLR 2026</span>
+              <span class="pub__badge pub__badge--ccfa">CCF A</span>
+              <div class="pub__links">
+                <a href="https://arxiv.org/pdf/2601.20765" class="pub__link" target="_blank" rel="noopener">Paper</a>
+                <a href="https://github.com/NanMuZ/C4" class="pub__link" target="_blank" rel="noopener">Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="pub__image">
+            <img src="assets/c4_logo.svg" alt="Paper Image">
+          </div>
+        </div>
+
+        <!-- Pub 3 -->
+        <div class="pub reveal">
+          <span class="pub__number">[3]</span>
+          <div class="pub__content">
+            <p class="pub__title">FORLER: Federated Offline Reinforcement Learning with Q-Ensemble and Actor
+              Rectification</p>
+            <p class="pub__authors"><span class="me">Nan Qiao</span>, Sheng Yue</p>
+            <div class="pub__meta">
+              <span class="pub__venue">IEEE ICC 2026</span>
+              <span class="pub__badge pub__badge--thcpl">TH-CPL B</span>
+              <div class="pub__links">
+                <a href="https://arxiv.org/pdf/2602.02055" class="pub__link" target="_blank" rel="noopener">Paper</a>
+                <a href="https://github.com/NanMuZ/FORLER/" class="pub__link" target="_blank" rel="noopener">Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="pub__image">
+            <img src="assets/forler_logo.svg" alt="Paper Image">
+          </div>
+        </div>
+
+        <!-- Pub 4 -->
+        <div class="pub reveal">
+          <span class="pub__number">[4]</span>
+          <div class="pub__content">
+            <p class="pub__title">FOVA: Offline Federated Reinforcement Learning With Mixed-Quality Data</p>
+            <p class="pub__authors"><span class="me">Nan Qiao</span>, Sheng Yue, Ju Ren, Yongmin Zhang</p>
+            <div class="pub__meta">
+              <span class="pub__venue">IEEE/ACM ToN 2025</span>
+              <span class="pub__badge pub__badge--ccfa">CCF A</span>
+              <div class="pub__links">
+                <a href="https://sites.google.com/view/FOVA" class="pub__link" target="_blank"
+                  rel="noopener">Project</a>
+                <a href="https://arxiv.org/pdf/2512.02350" class="pub__link" target="_blank" rel="noopener">Paper</a>
+                <a href="https://github.com/QiaoNan-Git/FOVA" class="pub__link" target="_blank" rel="noopener">Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="pub__image">
+            <img src="assets/fova_logo.svg" alt="Paper Image">
+          </div>
+        </div>
+
+        <!-- Pub 5 -->
+        <div class="pub reveal">
+          <span class="pub__number">[5]</span>
+          <div class="pub__content">
+            <p class="pub__title">PoPeC: PAoI-Centric Task Offloading with Priority over Unreliable Channels</p>
+            <p class="pub__authors"><span class="me">Nan Qiao</span>, Sheng Yue, Yongmin Zhang, Ju Ren</p>
+            <div class="pub__meta">
+              <span class="pub__venue">IEEE/ACM ToN 2024</span>
+              <span class="pub__badge pub__badge--ccfa">CCF A</span>
+              <div class="pub__links">
+                <a href="https://arxiv.org/pdf/2303.15119" class="pub__link" target="_blank" rel="noopener">Paper</a>
+              </div>
+            </div>
+          </div>
+          <div class="pub__image">
+            <img src="assets/popec_logo.svg" alt="Paper Image">
+          </div>
+        </div>
+
+        <!-- Pub 6 -->
+        <div class="pub reveal">
+          <span class="pub__number">[6]</span>
+          <div class="pub__content">
+            <p class="pub__title">Distributed Pricing and Bandwidth Allocation in Crowdsourced Networks</p>
+            <p class="pub__authors">Yongmin Zhang, Cenchen Ji, <span class="me">Nan Qiao</span>, Ju Ren, Yaoxue Zhang,
+              Yuanyuan Yang</p>
+            <div class="pub__meta">
+              <span class="pub__venue">IEEE TMC 2023</span>
+              <span class="pub__badge pub__badge--ccfa">CCF A</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pub 7 -->
+        <div class="pub reveal">
+          <span class="pub__number">[7]</span>
+          <div class="pub__content">
+            <p class="pub__title">TODG: Distributed Task Offloading with Delay Guarantees for Edge Computing</p>
+            <p class="pub__authors">Sheng Yue, Ju Ren, <span class="me">Nan Qiao</span>, Yongmin Zhang, Hongbo Jiang,
+              Yaoxue Zhang, Yuanyuan Yang</p>
+            <div class="pub__meta">
+              <span class="pub__venue">IEEE TPDS 2022</span>
+              <span class="pub__badge pub__badge--ccfa">CCF A</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Honors & Awards ====== -->
+  <section class="section" id="awards">
+    <div class="container">
+      <h2 class="section__title reveal">Honors &amp; Awards</h2>
+      <div class="awards-grid">
+        <div class="award reveal"><span class="award__icon">🏅</span><span class="award__year">2025</span><span
+            class="award__name">Excellent Student of Central South University</span></div>
+        <div class="award reveal"><span class="award__icon">🏆</span><span class="award__year">2024</span><span
+            class="award__name">President's Scholarship of Central South University</span></div>
+        <div class="award reveal"><span class="award__icon">🎖️</span><span class="award__year">2023</span><span
+            class="award__name">Encouragement Scholarship</span></div>
+        <div class="award reveal"><span class="award__icon">🏅</span><span class="award__year">2022</span><span
+            class="award__name">Excellent Student of Central South University</span></div>
+        <div class="award reveal"><span class="award__icon">🎓</span><span class="award__year">2021</span><span
+            class="award__name">Outstanding Graduate of Hunan Province</span></div>
+        <div class="award reveal"><span class="award__icon">🎓</span><span class="award__year">2021</span><span
+            class="award__name">Outstanding Graduate of Central South University</span></div>
+        <div class="award reveal"><span class="award__icon">🏅</span><span class="award__year">2020</span><span
+            class="award__name">Excellent Student of Central South University</span></div>
+        <div class="award reveal"><span class="award__icon">⭐</span><span class="award__year">2020</span><span
+            class="award__name">Innovative Top-notch Student Cultivation Scholarship</span></div>
+        <div class="award reveal"><span class="award__icon">🏅</span><span class="award__year">2019</span><span
+            class="award__name">Excellent Student of Central South University</span></div>
+        <div class="award reveal"><span class="award__icon">🎖️</span><span class="award__year">2019</span><span
+            class="award__name">Seagate Scholarship</span></div>
+        <div class="award reveal"><span class="award__icon">🏅</span><span class="award__year">2018</span><span
+            class="award__name">Excellent Student of Central South University</span></div>
+        <div class="award reveal"><span class="award__icon">🏆</span><span class="award__year">2018</span><span
+            class="award__name">National Scholarship</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Academic Service ====== -->
+  <section class="section" id="service">
+    <div class="container">
+      <h2 class="section__title reveal">Academic Service</h2>
+      <div class="service-content reveal">
+        <p>Served as a reviewer for the following venues:</p>
+        <div class="service-tags">
+          <span class="service-tag">IEEE/ACM ToN</span>
+          <span class="service-tag">IEEE TMC</span>
+          <span class="service-tag">IEEE TCCN</span>
+          <span class="service-tag">IEEE TCC</span>
+          <span class="service-tag">ICML</span>
+          <span class="service-tag">KDD</span>
+          <span class="service-tag">ICDCS</span>
+          <span class="service-tag">MSN</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Map / Visitors ====== -->
+  <section class="section" id="visitors" style="display: none;">
+    <div class="container">
+      <h2 class="section__title reveal">Visitor Map</h2>
+      <!-- 将最大宽度从 400px 进一步缩小到 250px，让地球显得更小巧精致 -->
+      <div class="map-container reveal"
+        style="display:flex; justify-content:center; padding: 20px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); backdrop-filter: blur(12px); max-width: 250px; margin: 0 auto;">
+        <!-- 这是你专属的 ClustrMaps 3D 地球访客追踪脚本。为了在本地也能预览，我加上了 https: 前缀 -->
+        <script type="text/javascript" id="clstr_globe"
+          src="https://clustrmaps.com/globe.js?d=hXdpFQgTicX1yz_Hi0SjQEVDnhqwpDKJL_j8VA6fFdU"></script>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Footer ====== -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">
+        &copy; 2026 Nan Qiao · <a href="mailto:nanqiao.ai@gmail.com">nanqiao.ai@gmail.com</a><br />
+        FIT 3-503, Tsinghua University, Beijing, China
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

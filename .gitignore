@@ -1,0 +1,10 @@
+.DS_Store
+assets/.DS_Store
+plot_adamo*.py
+assets/adamo_logo_3d.svg
+assets/adamo_logo_3d_v2.svg
+assets/adamo_logo_backup.svg
+assets/forler_logo_backup.svg
+assets/fova_logo_backup.svg
+assets/profile_backup.png
+extract_paper_images.py
