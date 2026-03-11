@@ -74,6 +74,12 @@
 }
 
 /* Dark mode adjustments for ClustrMaps Globe */
+#visitors {
+  display: none;
+}
+[data-theme="dark"] #visitors {
+  display: block;
+}
 [data-theme="dark"] .map-container canvas,
 [data-theme="dark"] #clstr_globe {
   filter: invert(1) hue-rotate(180deg);
