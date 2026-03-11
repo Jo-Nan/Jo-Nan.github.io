@@ -47,7 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (savedTheme) {
     setTheme(savedTheme === 'dark');
   } else {
-    setTheme(prefersDark);
+    // Default to light regardless of OS preference
+    setTheme(false);
   }
 
   themeBtn.addEventListener('click', () => {
