@@ -73,17 +73,12 @@
   --clr-navbar-bg:     rgba(15, 17, 23, 0.88);
 }
 
-/* Dark mode adjustments for ClustrMaps Globe */
+/* Visitor Globe: only visible in dark mode */
 #visitors {
   display: none;
 }
 [data-theme="dark"] #visitors {
   display: block;
-}
-[data-theme="dark"] .map-container canvas,
-[data-theme="dark"] #clstr_globe {
-  filter: invert(1) hue-rotate(180deg);
-  opacity: 0.9;
 }
 
 /* ---------- Reset & Base ---------- */

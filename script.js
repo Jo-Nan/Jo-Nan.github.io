@@ -9,10 +9,38 @@ document.addEventListener('DOMContentLoaded', () => {
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const savedTheme = localStorage.getItem('theme');
 
+  let globeLoaded = false;
+
+  function loadGlobe() {
+    const container = document.getElementById('globeContainer');
+    if (!container || globeLoaded) return;
+    // Clear previous content
+    container.innerHTML = '';
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.id = 'clstr_globe';
+    script.src = '//clustrmaps.com/globe.js?d=zyzOYPehJe1sD1r3RxM-keMHDULQTjFOezOPzMl1V6w';
+    container.appendChild(script);
+    globeLoaded = true;
+  }
+
+  function removeGlobe() {
+    const container = document.getElementById('globeContainer');
+    if (!container) return;
+    container.innerHTML = '';
+    globeLoaded = false;
+  }
+
   function setTheme(dark) {
     document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
     themeBtn.textContent = dark ? '☀️' : '🌙';
     localStorage.setItem('theme', dark ? 'dark' : 'light');
+    // Load/remove globe based on theme
+    if (dark) {
+      loadGlobe();
+    } else {
+      removeGlobe();
+    }
   }
 
   // Initialize theme

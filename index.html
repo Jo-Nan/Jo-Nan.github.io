@@ -393,15 +393,13 @@
     </div>
   </section>
 
-  <!-- ====== Map / Visitors ====== -->
+  <!-- ====== Map / Visitors (Dark mode only) ====== -->
   <section class="section" id="visitors">
     <div class="container">
       <h2 class="section__title reveal">Visitor Map</h2>
-      <!-- 将最大宽度从 400px 进一步缩小到 250px，让地球显得更小巧精致 -->
-      <div class="map-container reveal"
+      <div class="map-container reveal" id="globeContainer"
         style="display:flex; justify-content:center; padding: 20px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); backdrop-filter: blur(12px); max-width: 250px; margin: 0 auto;">
-        <!-- 这是你专属的 ClustrMaps 3D 地球访客追踪脚本。为了在本地也能预览，我加上了 https: 前缀 -->
-        <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=zyzOYPehJe1sD1r3RxM-keMHDULQTjFOezOPzMl1V6w"></script>
+        <!-- Globe will be injected by JS in dark mode -->
       </div>
     </div>
   </section>
