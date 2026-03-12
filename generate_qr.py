@@ -2,7 +2,7 @@ import qrcode
 from PIL import Image
 
 url = "https://jo-nan.github.io/"
-logo_path = "assets/profile.png"
+logo_path = "logo.png"
 output_path = "assets/qrcode.png"
 
 # Generate QR code

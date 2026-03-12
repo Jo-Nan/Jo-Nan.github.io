@@ -35,11 +35,14 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
     themeBtn.textContent = dark ? '☀️' : '🌙';
     localStorage.setItem('theme', dark ? 'dark' : 'light');
-    // Load/remove globe based on theme
-    if (dark) {
-      loadGlobe();
-    } else {
-      removeGlobe();
+    
+    // Always ensure globe is loaded for tracking
+    loadGlobe();
+    
+    // Toggle visibility of the visitors section based on theme
+    const visitorsSection = document.getElementById('visitors');
+    if (visitorsSection) {
+      visitorsSection.style.display = dark ? 'block' : 'none';
     }
   }
 
