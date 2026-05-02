@@ -25,6 +25,7 @@
   --clr-badge-ccfa:    #3b5bdb;
   --clr-badge-thcpl:   #0ca678;
   --clr-badge-sub:     #e67700;
+  --clr-badge-accepted:#2b8a3e;
   --clr-navbar-bg:     rgba(248, 249, 252, 0.85);
 
   /* Typography */
@@ -592,6 +593,9 @@ img {
 }
 .pub__badge--sub {
   background: var(--clr-badge-sub);
+}
+.pub__badge--accepted {
+  background: var(--clr-badge-accepted);
 }
 .pub__links {
   display: inline-flex;
